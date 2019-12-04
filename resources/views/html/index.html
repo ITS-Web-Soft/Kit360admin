@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'> -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,700'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+          <!--Nav Tab-->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Category</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#references" role="tab" data-toggle="tab">Product Step</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#references" role="tab" data-toggle="tab">Product field</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#references" role="tab" data-toggle="tab">Product Design</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">Size</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#references" role="tab" data-toggle="tab">Group Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#references" role="tab" data-toggle="tab">Related Product</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#references" role="tab" data-toggle="tab">Cross Sell</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#references" role="tab" data-toggle="tab">Simple Price Tires</a>
+                          </li> -->
+          </ul>
+          <!--end-->
+          <!-- Tab panes -->
+          <div class="tab-content" style="margin-top: 20px;;">
+            <div role="tabpanel" class="tab-pane fade in active" id="profile">
+              <form id="contact-form" method="post" action="contact.php" role="form">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_name">Name *</label>
+                        <input id="form_name" type="text" name="name" class="form-control"
+                          placeholder="Please enter your firstname *" required="required"
+                          data-error="Firstname is required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="url_slug">URL Slug *</label>
+                        <input id="url_slug" type="text" name="url_slug" class="form-control"
+                          placeholder="Please Valid URL *" required="required" data-error="url_slug is required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="category">Category *</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cart_p">Cart Price*</label>
+                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 29.99"
+                          required="required" data-error="Cart Price required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="m_quantity">Minimum Quantity*</label>
+                        <input id="m_quantity" type="number" name="m_quantity" class="form-control" placeholder="e.g 5"
+                          required="required" data-error="">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="p_weight">Product Weight*</label>
+                        <input id="p_weight" type="number" name="p_weight" class="form-control" placeholder="e.g 0.5"
+                          required="required" data-error="required">
+                        <p>Use the same as your ecommerece unit</p>
+                        <div class="ar_display"><input type="checkbox" value="">
+                          <lable>Hide Price Breakdown</lable>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="f_overlay">Front Overlay*</label>
+                        <!-- <input id="f_overlay" type="number" name="f_overlay" class="form-control" placeholder=""
+                              required="required" data-error="">   -->
+                        <select class="form-control">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <p>Image Overlay with shading.Only required for products with static overlay e.g without
+                          selectable collar style.</p>
+                        <div class="ar_display"><input type="checkbox" value="">
+                          <lable>Disable Back View</lable>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="f_v_name">Front View Name*</label>
+                        <input id="f_v_name" type="text" name="f_v_name" class="form-control" placeholder="e.g Front"
+                          required="required" data-error="required">
+                        <p>Text entered here override the view Front/Back button text.Entering "Main" here would change
+                          "view front" to "view main".</p>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="b_overlay">Back Overlay*</label>
+                        <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
+                        <select class="form-control">
+                          <option>Test</option>
+                          <option>Test</option>
+                          <option>Test</option>
+                        </select>
+
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="b_v_name">Back View Name*</label>
+                        <input id="b_v_name" type="text" name="b_v_name" class="form-control" placeholder="e.g Back"
+                          required="required" data-error="required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="b_overlay">List image</label>
+                        <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
+                        <select class="form-control">
+                          <option>Test</option>
+                          <option>Test</option>
+                          <option>Test</option>
+                        </select>
+                        <p>Image that display on product listing page</p>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="b_overlay">3D Model</label>
+                        <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
+                        <select class="form-control">
+                          <option>Test</option>
+                          <option>Test</option>
+                          <option>Test</option>
+                        </select>
+                        <p>Select .obj, or .zip file</p>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="b_overlay">Back Material colours </label>
+                        <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
+                        <div class="input-group">
+                          <span class="input-group-addon"></span><input id="form_email" type="email" name="email"
+                            class="form-control" placeholder="e.g #ffffff" required="required"
+                            data-error="Valid email is required.">
+                        </div>
+                        <p>Set inside material color.Leave emplty to leave the to mirror the front material </p>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="b_overlay">Cameras</label>
+                        <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
+                        <select class="form-control">
+                          <option>Test</option>
+                          <option>Test</option>
+                          <option>Test</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="b_overlay">Form Reply camera override</label>
+                        <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
+                        <select class="form-control">
+                          <option>Test</option>
+                          <option>Test</option>
+                          <option>Test</option>
+                        </select>
+                        <p>Alternative camera to use in form replies</p>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="b_overlay">Position offset</label>
+                        <div class="row no-gutters">
+                          <div class="col-md-4">
+                            <input id="b_overlay" type="text" name="b_overlay"
+                              class="form-control" placeholder="X" required="required" data-error="">
+                          </div>
+                          <div class="col-md-4">
+                            <input id="b_overlay" type="text" name="b_overlay"
+                              class="form-control" placeholder="Y" required="required" data-error="">
+                          </div>
+                          <div class="col-md-4">
+                            <input id="b_overlay" type="text" name="b_overlay"
+                              class="form-control" placeholder="Z" required="required" data-error="">
+                          </div>
+                        </div>
+
+
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_email">Scale</label>
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="e.g 100"
+                          required="required" data-error="Valid email is required.">
+                        <div class="help-block with-errors"></div>
+                        <p>Default scale= 1.1 Unit= 1 meter</p>
+                        <div class="ar_display"><input type="checkbox" value="">
+                          <lable>Override form reply model Position/scale</lable>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_phone">Light Brighness</label>
+                        <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="e.g 1.5">
+                        <div class="help-block with-errors"></div>
+                        <p>Default 1.Twice as bright=2</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_email">SVG Dimentsions</label>
+                        <div class="row no-gutters">
+                            <div class="col-sm-6 ar_display">
+                              <input id="b_overlay" type="text" name="b_overlay"
+                                class="form-control" placeholder="e.g 400" required="required" data-error="">
+                            </div>
+                            <div class="col-sm-6 ar_display">
+                              <input id="b_overlay" type="text" name="b_overlay"
+                                class="form-control" placeholder="e.g 400" required="required" data-error="">
+                            </div>
+                            
+                          </div>  
+                        <div class="help-block with-errors"></div>
+                        <p>Example:400x400</p>
+                        <p>The width of SVG that that was exported from the illustrator</p>
+                        <div class="ar_display"><input type="checkbox" value="">
+                          <lable> Show Print view buttton</lable>
+                         
+                        </div>
+                        <p>Enable the button to Toggle between 2D and 3D print view</p>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_phone">Height on baskit page</label>
+                        <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="e.g 200">
+                        <div class="help-block with-errors"></div>
+                        <p>The height of the product on the fianl baskit page</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="b_overlay">Default Toggle colours</label>
+                        <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
+                        <div class="input-group">
+                          <span class="input-group-addon"></span><input id="form_email" type="email" name="email"
+                            class="form-control" placeholder="e.g #ffffff" required="required"
+                            data-error="Valid email is required.">
+                        </div>
+                        <p>Set inside material color.Leave emplty to leave the to mirror the front material </p>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="b_overlay">PDF overlay image</label>
+                        <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
+                        <select class="form-control">
+                          <option>Test</option>
+                          <option>Test</option>
+                          <option>Test</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                        <p>Image that overlayed on the top of select pdfs(Require PDF Customization)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_email">Position</label>
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="e.g 10"
+                          required="required" data-error="Valid email is required.">
+                        <div class="help-block with-errors"></div>
+                        <p>Position in the product list</p>
+                        <div class="ar_display"><input type="checkbox" value="">
+                          <lable>Active</lable>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_phone">Phone</label>
+                            <input id="form_phone" type="tel" name="phone" class="form-control"
+                              placeholder="Please enter your phone">
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div> -->
+                  </div>
+                  <div class="row">
+
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Send message">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="buzz">bbb</div>
+            <div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
+          </div>
+          <!-- partial -->
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+  <!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
