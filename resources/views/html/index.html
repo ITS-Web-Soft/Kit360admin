@@ -7,6 +7,7 @@
   <!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'> -->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,700'>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+  <!-- <link rel='stylesheet' href='https://cdn.datatables.net/v/bs-3.3.6/jqc-1.12.3/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.12/af-2.1.2/b-1.2.2/b-colvis-1.2.2/b-html5-1.2.2/b-print-1.2.2/cr-1.3.2/fc-3.2.2/fh-3.1.2/kt-2.1.3/r-2.1.0/rr-1.1.2/sc-1.4.2/se-1.2.0/datatables.min.css'> -->
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -16,7 +17,7 @@
 
   <body>
 
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="row">
 
@@ -24,47 +25,53 @@
           <!--Nav Tab-->
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">product</a>
+              <a class="nav-link active" href="#product" role="tab" data-toggle="tab">product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Category</a>
+              <a class="nav-link" href="#category" role="tab" data-toggle="tab">Category</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#references" role="tab" data-toggle="tab">Product Step</a>
+              <a class="nav-link" href="#product_step" role="tab" data-toggle="tab">Product Step</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#references" role="tab" data-toggle="tab">Product field</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#references" role="tab" data-toggle="tab">Product Design</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#references" role="tab" data-toggle="tab">Size</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#references" role="tab" data-toggle="tab">Group Item</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#references" role="tab" data-toggle="tab">Related Product</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#references" role="tab" data-toggle="tab">Cross Sell</a>
-                        </li>
-                        <!-- <li class="nav-item">
+              <a class="nav-link" href="#Product_field" role="tab" data-toggle="tab">Product field</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Product_Design" role="tab" data-toggle="tab">Product Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#references" role="tab" data-toggle="tab">Size</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#references" role="tab" data-toggle="tab">Group Item</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#references" role="tab" data-toggle="tab">Related Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#references" role="tab" data-toggle="tab">Cross Sell</a>
+            </li>
+            <!-- <li class="nav-item">
                             <a class="nav-link" href="#references" role="tab" data-toggle="tab">Simple Price Tires</a>
                           </li> -->
           </ul>
           <!--end-->
           <!-- Tab panes -->
-          <div class="tab-content" style="margin-top: 20px;;">
-            <div role="tabpanel" class="tab-pane fade in active" id="profile">
-              <form id="contact-form" method="post" action="contact.php" role="form">
+          <div class="tab-content ">
+            <div role="tabpanel" class="tab-pane fade in active" id="product">
+                <div class="m-t-b"><button id="product-btn" onclick="divToggle('product-form-toggle')" class="btn btn-primary pushme with-color">Add Product</button></div>
+               
+               <!--Form Start-->
+               <div class="d-none" id="product-form-toggle"> 
+              <form id="product-form" class="m-t-b" method="post" action="contact.php" role="form">
 
                 <div class="messages"></div>
 
                 <div class="controls">
-
+                    <h3>Add Product</h3>
+                    <hr>
                   <div class="row">
+                   
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="form_name">Name *</label>
@@ -262,16 +269,16 @@
                         <label for="b_overlay">Position offset</label>
                         <div class="row no-gutters">
                           <div class="col-md-4">
-                            <input id="b_overlay" type="text" name="b_overlay"
-                              class="form-control" placeholder="X" required="required" data-error="">
+                            <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder="X"
+                              required="required" data-error="">
                           </div>
                           <div class="col-md-4">
-                            <input id="b_overlay" type="text" name="b_overlay"
-                              class="form-control" placeholder="Y" required="required" data-error="">
+                            <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder="Y"
+                              required="required" data-error="">
                           </div>
                           <div class="col-md-4">
-                            <input id="b_overlay" type="text" name="b_overlay"
-                              class="form-control" placeholder="Z" required="required" data-error="">
+                            <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder="Z"
+                              required="required" data-error="">
                           </div>
                         </div>
 
@@ -308,22 +315,22 @@
                       <div class="form-group">
                         <label for="form_email">SVG Dimentsions</label>
                         <div class="row no-gutters">
-                            <div class="col-sm-6 ar_display">
-                              <input id="b_overlay" type="text" name="b_overlay"
-                                class="form-control" placeholder="e.g 400" required="required" data-error="">
-                            </div>
-                            <div class="col-sm-6 ar_display">
-                              <input id="b_overlay" type="text" name="b_overlay"
-                                class="form-control" placeholder="e.g 400" required="required" data-error="">
-                            </div>
-                            
-                          </div>  
+                          <div class="col-sm-6 ar_display">
+                            <input id="b_overlay" type="text" name="b_overlay" class="form-control"
+                              placeholder="e.g 400" required="required" data-error="">
+                          </div>
+                          <div class="col-sm-6 ar_display">
+                            <input id="b_overlay" type="text" name="b_overlay" class="form-control"
+                              placeholder="e.g 400" required="required" data-error="">
+                          </div>
+
+                        </div>
                         <div class="help-block with-errors"></div>
                         <p>Example:400x400</p>
                         <p>The width of SVG that that was exported from the illustrator</p>
                         <div class="ar_display"><input type="checkbox" value="">
                           <lable> Show Print view buttton</lable>
-                         
+
                         </div>
                         <p>Enable the button to Toggle between 2D and 3D print view</p>
                       </div>
@@ -402,12 +409,601 @@
                 </div>
 
               </form>
-
+              </div>
+              <!--Form End-->
+              <!--Table-->
+              <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+                  <thead>
+                    <tr role="row">
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 215px;">Category ID</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">Category Name</th>
+                      <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">position</th>
+                      
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th rowspan="1" colspan="1">ID</th>
+                      <th rowspan="1" colspan="1">Category ID</th>
+                      <th rowspan="1" colspan="1">Category Name</th>
+                      <th rowspan="1" colspan="1">Position</th>
+                      
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                
+                
+                    <tr role="row" class="odd">
+                      <td class="">Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td class="sorting_1">66</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Michael Silva</td>
+                      <td>Marketing Designer</td>
+                      <td>London</td>
+                      <td class="sorting_1">66</td>
+                      
+                    </tr>
+                    <tr role="row" class="odd">
+                      <td class="">Jackson Bradshaw</td>
+                      <td>Director</td>
+                      <td>New York</td>
+                      <td class="sorting_1">65</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Olivia Liang</td>
+                      <td>Support Engineer</td>
+                      <td>Singapore</td>
+                      <td class="sorting_1">64</td>
+                     
+                    </tr>
+                    <tr role="row" class="odd">
+                      <td class="">Paul Byrd</td>
+                      <td>Chief Financial Officer (CFO)</td>
+                      <td>New York</td>
+                      <td class="sorting_1">64</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Serge Baldwin</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td class="sorting_1">64</td>
+                      
+                    </tr>
+                    <tr role="row" class="odd">
+                      <td class="">Garrett Winters</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td class="sorting_1">63</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Brielle Williamson</td>
+                      <td>Integration Specialist</td>
+                      <td>New York</td>
+                      <td class="sorting_1">61</td>
+                    </tr>
+                  </tbody>
+                </table>
+              <!--End table-->
+               
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="buzz">bbb</div>
-            <div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
-          </div>
-          <!-- partial -->
+            <!--Category tab-contant-->
+            <div role="tabpanel" class="tab-pane fade" id="category">
+                <div class="m-t-b"><button id="p-catagory-btn" onclick="divToggle('category-form-toggle')" class="btn btn-primary pushme with-color">Add Category</button></div>
+               
+               <!--Form Start-->
+               <div class="d-none" id="category-form-toggle" >
+              <form id="category-form" class="m-t-b" method="post" action="contact.php" role="form">
+                <div class="messages"></div>
+                <div class="controls">
+                    <h3>Add Category</h3>
+                    <hr> 
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="category">Category *</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cart_p">Position</label>
+                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 10"
+                          required="required" data-error="Position required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Save Category Mapping">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+              </div>
+              <!--Form End-->
+              <!--Table-->
+              <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+                  <thead>
+                    <tr role="row">
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 215px;">Category ID</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">Category Name</th>
+                      <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">position</th>
+                      
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th rowspan="1" colspan="1">ID</th>
+                      <th rowspan="1" colspan="1">Category ID</th>
+                      <th rowspan="1" colspan="1">Category Name</th>
+                      <th rowspan="1" colspan="1">Position</th>
+                      
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                
+                
+                    <tr role="row" class="odd">
+                      <td class="">Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td class="sorting_1">66</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Michael Silva</td>
+                      <td>Marketing Designer</td>
+                      <td>London</td>
+                      <td class="sorting_1">66</td>
+                      
+                    </tr>
+                    <tr role="row" class="odd">
+                      <td class="">Jackson Bradshaw</td>
+                      <td>Director</td>
+                      <td>New York</td>
+                      <td class="sorting_1">65</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Olivia Liang</td>
+                      <td>Support Engineer</td>
+                      <td>Singapore</td>
+                      <td class="sorting_1">64</td>
+                     
+                    </tr>
+                    <tr role="row" class="odd">
+                      <td class="">Paul Byrd</td>
+                      <td>Chief Financial Officer (CFO)</td>
+                      <td>New York</td>
+                      <td class="sorting_1">64</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Serge Baldwin</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td class="sorting_1">64</td>
+                      
+                    </tr>
+                    <tr role="row" class="odd">
+                      <td class="">Garrett Winters</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td class="sorting_1">63</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Brielle Williamson</td>
+                      <td>Integration Specialist</td>
+                      <td>New York</td>
+                      <td class="sorting_1">61</td>
+                    </tr>
+                  </tbody>
+                </table>
+              <!--End table-->
+               
+            </div>
+            <!--end-->
+             <!--product_step tab-contant-->
+             <div role="tabpanel" class="tab-pane fade" id="product_step">
+                <div class="m-t-b"><button id="p-step-btn" class="btn btn-primary pushme with-color" onclick="divToggle('p-step-form')">Add Step</button></div>               
+               <!--Form Start--> 
+               <div class="d-none" id="p-step-form" >
+               <form class="m-t-b" method="post" action="contact.php" role="form">
+                <div class="messages"></div>
+                <div class="controls">
+                    <h3>Add Step</h3>
+                    <hr> 
+                  <!--input Fields-->
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="cart_p">Name</label>
+                            <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="e.g 10"
+                              required="required" data-error="Position required">
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="cart_p">Position</label>
+                              <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 10"
+                                required="required" data-error="Position required">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="category">Paretn Step</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Save Step">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+              </div>
+              <!--Form End-->              
+              <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+                  <thead>
+                    <tr role="row">
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 215px;">Category ID</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">Category Name</th>
+                      <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">position</th>
+                      
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th rowspan="1" colspan="1">ID</th>
+                      <th rowspan="1" colspan="1">Category ID</th>
+                      <th rowspan="1" colspan="1">Category Name</th>
+                      <th rowspan="1" colspan="1">Position</th>
+                      
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                
+                
+                    <tr role="row" class="odd">
+                      <td class="">Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td class="sorting_1">66</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Michael Silva</td>
+                      <td>Marketing Designer</td>
+                      <td>London</td>
+                      <td class="sorting_1">66</td>
+                      
+                    </tr>
+                    <tr role="row" class="odd">
+                      <td class="">Jackson Bradshaw</td>
+                      <td>Director</td>
+                      <td>New York</td>
+                      <td class="sorting_1">65</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Olivia Liang</td>
+                      <td>Support Engineer</td>
+                      <td>Singapore</td>
+                      <td class="sorting_1">64</td>
+                     
+                    </tr>
+                    <tr role="row" class="odd">
+                      <td class="">Paul Byrd</td>
+                      <td>Chief Financial Officer (CFO)</td>
+                      <td>New York</td>
+                      <td class="sorting_1">64</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Serge Baldwin</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td class="sorting_1">64</td>
+                      
+                    </tr>
+                    <tr role="row" class="odd">
+                      <td class="">Garrett Winters</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td class="sorting_1">63</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Brielle Williamson</td>
+                      <td>Integration Specialist</td>
+                      <td>New York</td>
+                      <td class="sorting_1">61</td>
+                    </tr>
+                  </tbody>
+                </table>               
+            </div>
+            <!--end-->
+             <!--product_step tab-contant-->
+             <div role="tabpanel" class="tab-pane fade" id="Product_field">
+               
+                <div class="m-t-b"><button id="p-step-btn" class="btn btn-primary pushme with-color" onclick="divToggle('p-field-form-toggle')">Add Product Field</button>
+                  <button id="p-step-btn" class="btn btn-primary pushme with-color" onclick="divToggle('p-field-quantity-toggle')">Add Quantity Field</button>
+                  <button id="p-step-btn" class="btn btn-primary pushme with-color" onclick="divToggle('p-field-quantity-toggle')">Team Details Field</button>
+                  <button id="p-step-btn" class="btn btn-primary pushme with-color" onclick="divToggle('p-field-quantity-toggle')">Editer Field</button>
+                </div>
+                <div class="m-t-b"></div>               
+               <!--Form Start--> 
+               <div class="d-none" id="p-field-form-toggle" >
+               <form class="m-t-b" method="post" action="contact.php" role="form">
+                <div class="messages"></div>
+                <div class="controls">
+                    <h3>Add Product Field</h3>
+                    <hr> 
+                  <!--input Fields-->
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="cart_p">Name</label>
+                            <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="e.g 10"
+                              required="required" data-error="Position required">
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="cart_p">Position</label>
+                              <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 10"
+                                required="required" data-error="Position required">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="category">Step</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="category">type</label>
+                          <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                          <select class="form-control">
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                          </select>
+                          <div class="help-block with-errors"></div>
+                          <p>
+                              Checkbox: show/hide an SVG snippet. 
+                              Colour Picker/Colour Tile Picker: pick a colour from a data source. 
+                              Custom: any custom SVG. 
+                              Description: text on the form. 
+                              Dropdown: select from a data source. 
+                              Horizontal Rule: a horizontal line on the form. 
+                              Image: image file upload. 
+                              Pattern Transform: position and scale a pattern's content. 
+                              Tile Picker (image): select from a list of data source item images. 
+                              Tile Picker (description): select from a data source item descriptions. 
+                              Transform: position and scale SVG elements. 
+                              Text Box: enter text (e.g. for Set Text view action). 
+                              Text Area: multiline text for notes/comments. Does not make multi-line SVG text. 
+                              Slider: set a number value e.g. font size. 
+                              Team Details: enter each team with each players' details: size, name and number. Must use 'teamdetails' key. 
+                              Editor Units: Add multiple images and text. Must use 'editor' key. 
+                              Color List: Generate a list of colours from an image and allow customer to enter pantones next to each major colour. Key must be same as image key + list. e.g. key = "imagelist" if the image key was "image".
+                          </p>
+                        </div>
+                      </div>
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Save Step">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+              </div>
+              <!--Form End-->
+               <!--Form Start--> 
+               <div class="d-none" id="p-field-quantity-toggle" >
+                  <form class="m-t-b" method="post" action="contact.php" role="form">
+                   <div class="messages"></div>
+                   <div class="controls">
+                       <h3>Add Product Field</h3>
+                       <hr> 
+                     <!--input Fields-->
+                     <div class="row">
+                         <div class="col-md-6">
+                             <div class="form-group">
+                               <label for="cart_p">Name</label>
+                               <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="e.g 10"
+                                 required="required" data-error="Position required">
+                               <div class="help-block with-errors"></div>
+                             </div>
+                           </div>
+                           <div class="col-md-6">
+                               <div class="form-group">
+                                 <label for="cart_p">Position</label>
+                                 <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 10"
+                                   required="required" data-error="Position required">
+                                 <div class="help-block with-errors"></div>
+                               </div>
+                             </div>
+                     </div>
+                     <div class="row">
+                       <div class="col-md-6">
+                         <div class="form-group">
+                           <label for="category">View Action</label>
+                           <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                           <select class="form-control">
+                             <option>A</option>
+                             <option>B</option>
+                             <option>C</option>
+                           </select>
+                           <div class="help-block with-errors"></div>
+                           <p>
+
+                              How this field affects the SVG.
+
+                              Fill: fills the entire selected region the selected colour. 
+                              Outline Colour: changes the outline colour on the selected region. 
+                              Show Selected: shows the current data source item and hides the rest. 
+                              Toggle: turn on/off the selected region. 
+                              Pattern Fill: fills the entire selected region the pattern selected from the data source. 
+                              Pattern Transform: move and scale pattern. 
+                              Set Image: changes an SVG image to display the image currently selected by the customer. SVG image required e.g. <image x="40" y="40" width="50" height="50" transform="skewY(5)" /> 
+                              Image Filter: Remove White Background: use with checkbox, apply to image to automatically remove the white colour. Useful if customer has uploaded a JPEG image with a white background. 
+                              Set Gradient Stop Colour: change the colour of the selected gradient colour. Use a CSS selector in "IDs" fields e.g. #grad > stop:eq(0), #grad2 > stop:eq(0) 
+                              Set Font: used with a TextBox field, sets text in <text> elements in the selected region. To center the text update the textPath like: <textPath text-anchor="middle" startOffset="50%"> 
+                              Font Size: used with Dropdown or Tile Picker. Use data source item values such as 12pt, or 12px. 
+                              Bold: used with Checkbox, sets selected text bold. 
+                              Set Text: used with a TextBox field, sets font in <text> elements in the selected region 
+                              Transform: move and scale the selected region. Text elements need text-anchor="middle" so they scale from the center.
+                              Set Attribute: (advanced) change any SVG attribute to the selected value (e.g. use with a slider, data source item value). 
+                              Set Overlay: changes the overlay to the selected dropdown item. 
+                              Set 3D Model: Used like Set Overlay. Shows the selected 3D model from the data source. Put SVG in a Custom field. 
+                           </p>
+                         </div>
+                       </div>
+                       
+                     </div>
+                     <!---End-->
+                     <div class="row">
+                       <div class="col-md-12">
+                         <input type="submit" class="btn btn-success btn-send" value="Save Step">
+                       </div>
+                     </div>
+                     <div class="row">
+                       <div class="col-md-12">
+                         <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                       </div>
+                     </div>
+                   </div>
+   
+                 </form>
+                 </div>
+                 <!--Form End-->              
+              <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+                  <thead>
+                    <tr role="row">
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 215px;">Key</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">Name</th>
+                      <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">Step</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">type</th>
+                      <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">View Action</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">Pos</th>
+                      <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">SVG</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 100px;">Price</th>
+                      
+                      
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th rowspan="1" colspan="1">ID</th>
+                      <th rowspan="1" colspan="1">Category ID</th>
+                      <th rowspan="1" colspan="1">Category Name</th>
+                      <th rowspan="1" colspan="1">Position</th>
+                      
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                
+                
+                    <tr role="row" class="odd">
+                      <td class="">Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td class="sorting_1">66</td>
+                      <td class="">Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td class="sorting_1">66</td>
+                      <td class="sorting_1">66</td>
+                      
+                    </tr>
+                    <tr role="row" class="even">
+                      <td class="">Michael Silva</td>
+                      <td>Marketing Designer</td>
+                      <td>London</td>
+                      <td class="sorting_1">66</td>
+                      <td class="">Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td class="sorting_1">66</td>
+                      <td class="sorting_1">66</td>
+                      
+                    </tr>
+                    
+                  </tbody>
+                </table>               
+            </div>
+            <!--end-->
+           
+    
+          <!-- End Main Tab Content-->
 
 
         </div>
@@ -421,6 +1017,82 @@
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js'></script>
   <script src="./script.js"></script>
+  <!-- <script src='https://cdn.datatables.net/v/bs-3.3.6/jqc-1.12.3/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.12/af-2.1.2/b-1.2.2/b-colvis-1.2.2/b-html5-1.2.2/b-print-1.2.2/cr-1.3.2/fc-3.2.2/fh-3.1.2/kt-2.1.3/r-2.1.0/rr-1.1.2/sc-1.4.2/se-1.2.0/datatables.min.js'></script> -->
+  <!-- <script>$(function () {
+      $('#example').dataTable({
+        paging: false,
+        fixedHeader: {
+          header: true
+        },
+        dom: 'Bfrtip',
+        buttons: [
+          {
+            extend: 'excel',
+            text: 'Excel <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>'
+          },
+          {
+            extend: 'pdf',
+            text: 'PDF <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>'
+          },
+          
+          'copy',
+          'pdf',
+          'colvis'
+        ],
+        
+      });
+    });</script>
+    <script>
+    document.getElementById('product-btn').onclick = function(){
+    var el = document.getElementById('contact-form');
+    
+    if ( el.style.display != 'none' ){
+        el.style.display = 'none';
+    }
+    else {
+        el.style.display = 'block';
+    };
+    var category_tab = document.getElementById('category-form');
+    if ( category_tab.style.display != 'none' ){
+      category_tab.style.display = 'none';
+    }
+    else {
+      category_tab.style.display = 'block';
+    };
+};   
+    </script>
+        <script>
+        $(document).ready(function(){
+
+$(".pushme").click(function () {
+   $(this).text("DON'T PUSH ME");
+});
+
+$(".pushme-with-color").click(function () {
+   $(this).text("DON'T PUSH ME");
+   $(this).addClass("btn-danger");
+   $(this).removeClass("btn-warning");
+});
+
+$(".with-color").click(function () {    
+   if($(this).hasClass("btn-warning"))
+   {
+       $(this).addClass("btn-danger");
+       $(this).removeClass("btn-warning");
+   }
+   else{
+       $(this).addClass("btn-warning");
+       $(this).removeClass("btn-danger");
+   }
+});
+
+$(".pushme").click(function(){
+$(this).text(function(i, v){
+   return v === 'Add Product' ? 'Show Table' : 'Add Product'
+});
+});
+});
+        </script> -->
 
 </body>
 

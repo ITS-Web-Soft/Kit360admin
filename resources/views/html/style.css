@@ -2,10 +2,36 @@ body {
   padding: 20px 0;
   font-family: Lato, sans-serif;
 }
-.ar_display{
-  /* display: flex; */
+/* Gereral Style */
+.m-t-b{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.d-none{
+  display: none;
+}
+.d-show{
+  display: '';
 }
 .ar_alignment{
   margin-top: 5px;
   padding: 3px;
 }
+/* Genrel Style End */
+
+
+/* Table style */
+.dataTables_filter {
+  float: right;
+  margin-bottom: 1em;
+}
+.dataTables_filter:after {
+  clear: both;
+}
+.dt-buttons a .glyphicon {
+  visibility: hidden;
+}
+.dt-buttons a:hover .glyphicon {
+  visibility: visible;
+}
+/* End table style */
