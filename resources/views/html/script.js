@@ -135,4 +135,22 @@ return v === 'Add Product' ? 'Show Table' : 'Add Product'
 });
 });
 //end
+function goNextTab(currtab, nexttab) {
+
+  var curr = $('li.active');
+
+  curr.removeClass('active');
+  if (curr.is("li:last")) {
+      $("li:first-child").addClass('active');
+  } else {
+      curr.next().find("a").click();
+      curr.next().addClass('active');
+  }
+
+
+
+  $('#' + currtab).attr('aria-expanded', 'false');
+  $('#' + nexttab).attr('aria-expanded', 'true');
+
+}
 
