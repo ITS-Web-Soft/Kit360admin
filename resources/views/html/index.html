@@ -80,8 +80,8 @@
 
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="form_name">Name *</label>
-                        <input id="form_name" type="text" name="name" class="form-control"
+                        <label for="name">Name *</label>
+                        <input id="name" type="text" name="name" class="form-control"
                           placeholder="Please enter your firstname *" required="required"
                           data-error="Firstname is required.">
                         <div class="help-block with-errors"></div>
@@ -102,7 +102,7 @@
                       <div class="form-group">
                         <label for="category">Category *</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="category" name="category">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -112,8 +112,8 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Cart Price*</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 29.99"
+                        <label for="cart_price">Cart Price*</label>
+                        <input id="cart_price" type="number" name="cart_price" class="form-control" placeholder="e.g 29.99"
                           required="required" data-error="Cart Price required">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -124,16 +124,16 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="m_quantity">Minimum Quantity*</label>
-                        <input id="m_quantity" type="number" name="m_quantity" class="form-control" placeholder="e.g 5"
+                        <label for="minimum_quantity">Minimum Quantity*</label>
+                        <input id="minimum_quantity" type="number" name="minimum_quantity" class="form-control" placeholder="e.g 5"
                           required="required" data-error="">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="p_weight">Product Weight*</label>
-                        <input id="p_weight" type="number" name="p_weight" class="form-control" placeholder="e.g 0.5"
+                        <label for="product_weight">Product Weight*</label>
+                        <input id="product_weight" type="number" name="product_weight" class="form-control" placeholder="e.g 0.5"
                           required="required" data-error="required">
                         <p>Use the same as your ecommerece unit</p>
                         <div class="ar_display"><input type="checkbox" value="">
@@ -148,10 +148,10 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="f_overlay">Front Overlay*</label>
+                        <label for="front_overly">Front Overlay*</label>
                         <!-- <input id="f_overlay" type="number" name="f_overlay" class="form-control" placeholder=""
                               required="required" data-error="">   -->
-                        <select class="form-control">
+                        <select class="form-control" id="front_overly" name="front_overly">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -166,8 +166,8 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="f_v_name">Front View Name*</label>
-                        <input id="f_v_name" type="text" name="f_v_name" class="form-control" placeholder="e.g Front"
+                        <label for="front_view_name">Front View Name*</label>
+                        <input id="front_view_name" type="text" name="front_view_name" class="form-control" placeholder="e.g Front"
                           required="required" data-error="required">
                         <p>Text entered here override the view Front/Back button text.Entering "Main" here would
                           change
@@ -181,9 +181,9 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="b_overlay">Back Overlay*</label>
+                        <label for="back_overlay">Back Overlay*</label>
                         <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
-                        <select class="form-control">
+                        <select class="form-control" id="back_overlay" name="back_overlay">
                           <option>Test</option>
                           <option>Test</option>
                           <option>Test</option>
@@ -194,8 +194,8 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="b_v_name">Back View Name*</label>
-                        <input id="b_v_name" type="text" name="b_v_name" class="form-control" placeholder="e.g Back"
+                        <label for="back_view">Back View Name*</label>
+                        <input id="back_view" type="text" name="back_view" class="form-control" placeholder="e.g Back"
                           required="required" data-error="required">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -205,9 +205,9 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="b_overlay">List image</label>
+                        <label for="list_image">List image</label>
                         <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
-                        <select class="form-control">
+                        <select class="form-control" id="list_image" name="list_image">
                           <option>Test</option>
                           <option>Test</option>
                           <option>Test</option>
@@ -218,9 +218,9 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="b_overlay">3D Model</label>
+                        <label for="3d_modal">3D Model</label>
                         <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
-                        <select class="form-control">
+                        <select class="form-control" id="3d_modal" name="3d_modal">
                           <option>Test</option>
                           <option>Test</option>
                           <option>Test</option>
@@ -233,10 +233,10 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="b_overlay">Back Material colours </label>
+                        <label for="back_material">Back Material colours </label>
                         <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
                         <div class="input-group">
-                          <span class="input-group-addon"></span><input id="form_email" type="email" name="email"
+                          <span class="input-group-addon"></span><input id="back_material" type="email" name="back_material"
                             class="form-control" placeholder="e.g #ffffff" required="required"
                             data-error="Valid email is required.">
                         </div>
@@ -246,9 +246,9 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="b_overlay">Cameras</label>
+                        <label for="camera">Cameras</label>
                         <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
-                        <select class="form-control">
+                        <select class="form-control" id="camera" name="camera">
                           <option>Test</option>
                           <option>Test</option>
                           <option>Test</option>
@@ -260,9 +260,9 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="b_overlay">Form Reply camera override</label>
+                        <label for="camera_override">Form Reply camera override</label>
                         <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
-                        <select class="form-control">
+                        <select class="form-control" id="camera_override" name="camera_override">
                           <option>Test</option>
                           <option>Test</option>
                           <option>Test</option>
@@ -273,23 +273,21 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="b_overlay">Position offset</label>
+                        <label for="position_offset">Position offset</label>
                         <div class="row no-gutters">
                           <div class="col-md-4">
-                            <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder="X"
+                            <input id="position_offset_x" type="text" name="position_offset_x" class="form-control" placeholder="X"
                               required="required" data-error="">
                           </div>
                           <div class="col-md-4">
-                            <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder="Y"
+                            <input id="position_offset_y" type="text" name="position_offset_y" class="form-control" placeholder="Y"
                               required="required" data-error="">
                           </div>
                           <div class="col-md-4">
-                            <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder="Z"
+                            <input id="position_offset_z" type="text" name="position_offset_z" class="form-control" placeholder="Z"
                               required="required" data-error="">
                           </div>
                         </div>
-
-
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
@@ -297,8 +295,8 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="form_email">Scale</label>
-                        <input id="form_email" type="email" name="email" class="form-control" placeholder="e.g 100"
+                        <label for="scale">Scale</label>
+                        <input id="scale" type="text" name="scale" class="form-control" placeholder="e.g 100"
                           required="required" data-error="Valid email is required.">
                         <div class="help-block with-errors"></div>
                         <p>Default scale= 1.1 Unit= 1 meter</p>
@@ -310,8 +308,8 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="form_phone">Light Brighness</label>
-                        <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="e.g 1.5">
+                        <label for="light_brightness">Light Brightness</label>
+                        <input id="light_brightness" type="tel" name="light_brightness" class="form-control" placeholder="e.g 1.5">
                         <div class="help-block with-errors"></div>
                         <p>Default 1.Twice as bright=2</p>
                       </div>
@@ -320,14 +318,14 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="form_email">SVG Dimentsions</label>
+                        <label for="svg_dimention">SVG Dimentsions</label>
                         <div class="row no-gutters">
                           <div class="col-sm-6 ar_display">
-                            <input id="b_overlay" type="text" name="b_overlay" class="form-control"
+                            <input id="svg_dimention_1" type="text" name="svg_dimention_1" class="form-control"
                               placeholder="e.g 400" required="required" data-error="">
                           </div>
                           <div class="col-sm-6 ar_display">
-                            <input id="b_overlay" type="text" name="b_overlay" class="form-control"
+                            <input id="svg_dimention_2" type="text" name="svg_dimention_2" class="form-control"
                               placeholder="e.g 400" required="required" data-error="">
                           </div>
 
@@ -345,8 +343,8 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="form_phone">Height on baskit page</label>
-                        <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="e.g 200">
+                        <label for="height_baskit">Height on baskit page</label>
+                        <input id="height_baskit" type="tel" name="height_baskit" class="form-control" placeholder="e.g 200">
                         <div class="help-block with-errors"></div>
                         <p>The height of the product on the fianl baskit page</p>
                       </div>
@@ -355,10 +353,10 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="b_overlay">Default Toggle colours</label>
+                        <label for="befault_colour">Default Toggle colours</label>
                         <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
                         <div class="input-group">
-                          <span class="input-group-addon"></span><input id="form_email" type="email" name="email"
+                          <span class="input-group-addon"></span><input id="befault_colour" type="email" name="befault_colour"
                             class="form-control" placeholder="e.g #ffffff" required="required"
                             data-error="Valid email is required.">
                         </div>
@@ -368,9 +366,9 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="b_overlay">PDF overlay image</label>
+                        <label for="pdf_overlay_image">PDF overlay image</label>
                         <!-- <input id="b_overlay" type="text" name="b_overlay" class="form-control" placeholder=""  required="required" data-error="">-->
-                        <select class="form-control">
+                        <select class="form-control" id="pdf_overlay_image" name="pdf_overlay_image">
                           <option>Test</option>
                           <option>Test</option>
                           <option>Test</option>
@@ -383,8 +381,8 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="form_email">Position</label>
-                        <input id="form_email" type="email" name="email" class="form-control" placeholder="e.g 10"
+                        <label for="position">Position</label>
+                        <input id="position" type="email" name="position" class="form-control" placeholder="e.g 10"
                           required="required" data-error="Valid email is required.">
                         <div class="help-block with-errors"></div>
                         <p>Position in the product list</p>
@@ -405,7 +403,7 @@
                   <div class="row">
 
                     <div class="col-md-12">
-                      <input type="submit" class="btn btn-success btn-send" value="Send message">
+                      <input type="submit" class="btn btn-success btn-send" value="Save">
                     </div>
                   </div>
                   <div class="row">
@@ -527,7 +525,7 @@
                       <div class="form-group">
                         <label for="category">Category *</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="category" name="category">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -537,8 +535,8 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Position</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 10"
+                        <label for="Position">Position</label>
+                        <input id="Position" type="number" name="Position" class="form-control" placeholder="e.g 10"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -666,16 +664,16 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Name</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="e.g 10"
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" class="form-control" placeholder="e.g 10"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Position</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 10"
+                        <label for="position">Position</label>
+                        <input id="position" type="number" name="position" class="form-control" placeholder="e.g 10"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -684,9 +682,9 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Paretn Step</label>
+                        <label for="paretan_step">Paretn Step</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="paretan_step" name="paretan_step">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -781,16 +779,16 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Name</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="e.g 10"
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" class="form-control" placeholder="e.g 10"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Position</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 10"
+                        <label for="position">Position</label>
+                        <input id="position" type="number" name="position" class="form-control" placeholder="e.g 10"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -799,9 +797,9 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Step</label>
+                        <label for="step">Step</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" is="step" name="step">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -811,9 +809,9 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">type</label>
+                        <label for="type">type</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="type" name="type">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -846,6 +844,16 @@
                   </div>
                   <!---End-->
                   <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="discription">Description</label>
+                        <input id="discription" type="text" name="discription" class="form-control" placeholder=""
+                          required="required" data-error="Position required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
                     <div class="col-md-12">
                       <input type="submit" class="btn btn-success btn-send" value="Save Step">
                     </div>
@@ -872,9 +880,9 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Step</label>
+                        <label for="step">Step</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="step" name="step">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -885,9 +893,9 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Type</label>
+                        <label for="type">Type</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="type" name="type">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -933,18 +941,19 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Name</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Override Lable Text</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
+                        <label for="override_lable">Override Lable Text</label>
+                        <input id="override_lable" type="number" name="override_lable" class="form-control"
                           placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
+                        <p>Override field name text for client. If Name has a value use [[blank]] to hide it.</p>
                       </div>
                     </div>
                   </div>
@@ -952,47 +961,49 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Description</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="discription">Description</label>
+                        <input id="discription" type="text" name="discription" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Key</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
+                        <label for="key">Key</label>
+                        <input id="key" type="number" name="key" class="form-control"
                           placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
+                        <p>This is used to link the customer's chosen option to other product designs e.g. shirt base colour ('c1') to shorts base colour ('c1').
+                          This field is required as it provides a unique identifier in the basket for the design option.</p>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Required</label>
+                        <label for="required">Required</label>
                         <!-- <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
                                 required="required" data-error="Position required"> -->
                         <input type="checkbox" value="">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <!-- <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Override Lable Text</label>
+                        <label for="">Override Lable Text</label>
                         <input id="cart_p" type="number" name="cart_p" class="form-control"
                           placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="row">
 
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">View Action</label>
+                        <label for="view_action">View Action</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="view_action" name="view_action">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -1034,9 +1045,24 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Change Action</label>
+                        <label for="change_action">Change Action</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="change_action" name="change_action">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                         <p>What happens when the customer changes this field.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="step">Step</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control" id="step" name="step">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -1049,31 +1075,16 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Step</label>
-                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
-                          <option>A</option>
-                          <option>B</option>
-                          <option>C</option>
-                        </select>
-                        <div class="help-block with-errors"></div>
-
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="cart_p">Dafault Value</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="Dafault_value">Dafault Value</label>
+                        <input id="Dafault_value" type="text" name="Dafault_value" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Min Value</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
+                        <label for="min_value">Min Value</label>
+                        <input id="min_value" type="number" name="min_value" class="form-control"
                           placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -1082,22 +1093,23 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Max Value</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="max_value">Max Value</label>
+                        <input id="max_value" type="text" name="max_value" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Act On Field</label>
+                        <label for="act_field">Act On Field</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="act_field" name="act_field">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
                         </select>
                         <div class="help-block with-errors"></div>
+                        <p>The view action will be applied to another field instead of this field.</p>
 
                       </div>
                     </div>
@@ -1169,16 +1181,17 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">SVG Render Order</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="svg_render">SVG Render Order</label>
+                        <input id="svg_render" type="text" name="svg_render" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
+                        <p>Controls the order the SVG snippets are output onto the final SVG in case one is covering another. The SVG is rendered in this order: Design, Fields, Data Source Items. A higher position means it is rendered later and is layered on top of the previous layers.</p>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Position</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
+                        <label for="position">Position</label>
+                        <input id="position" type="text" name="position" class="form-control"
                           placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -1211,9 +1224,9 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Step</label>
+                        <label for="step">Step</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="step" name="step">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -1224,9 +1237,9 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Type</label>
+                        <label for="type">Type</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="type" name="type">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -1272,16 +1285,16 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Name</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Override Lable Text</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
+                        <label for="override_lable">Override Lable Text</label>
+                        <input id="override_lable" type="number" name="override_lable" class="form-control"
                           placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -1291,16 +1304,16 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Description</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="description">Description</label>
+                        <input id="description" type="text" name="description" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Key</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
+                        <label for="key">Key</label>
+                        <input id="key" type="number" name="key" class="form-control"
                           placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -1309,73 +1322,22 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Required</label>
-                        <!-- <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
-                                required="required" data-error="Position required"> -->
-                        <input type="checkbox" value="">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="cart_p">Override Lable Text</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
-                          placeholder="e.g Choose material" required="required" data-error="Position required">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="category">View Action</label>
+                        <label for="data_source">Data Source</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="data_source" name="data_source">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
                         </select>
                         <div class="help-block with-errors"></div>
-                        <p>
 
-                          How this field affects the SVG.
-
-                          Fill: fills the entire selected region the selected colour.
-                          Outline Colour: changes the outline colour on the selected region.
-                          Show Selected: shows the current data source item and hides the rest.
-                          Toggle: turn on/off the selected region.
-                          Pattern Fill: fills the entire selected region the pattern selected from the data source.
-                          Pattern Transform: move and scale pattern.
-                          Set Image: changes an SVG image to display the image currently selected by the customer. SVG
-                          image required e.g.
-                          <image x="40" y="40" width="50" height="50" transform="skewY(5)" />
-                          Image Filter: Remove White Background: use with checkbox, apply to image to automatically
-                          remove the white colour. Useful if customer has uploaded a JPEG image with a white
-                          background.
-                          Set Gradient Stop Colour: change the colour of the selected gradient colour. Use a CSS
-                          selector in "IDs" fields e.g. #grad > stop:eq(0), #grad2 > stop:eq(0)
-                          Set Font: used with a TextBox field, sets text in <text> elements in the selected region. To
-                            center the text update the textPath like: <textPath text-anchor="middle" startOffset="50%">
-                              Font Size: used with Dropdown or Tile Picker. Use data source item values such as 12pt,
-                              or 12px.
-                              Bold: used with Checkbox, sets selected text bold.
-                              Set Text: used with a TextBox field, sets font in <text> elements in the selected region
-                                Transform: move and scale the selected region. Text elements need text-anchor="middle"
-                                so they scale from the center.
-                                Set Attribute: (advanced) change any SVG attribute to the selected value (e.g. use
-                                with a slider, data source item value).
-                                Set Overlay: changes the overlay to the selected dropdown item.
-                                Set 3D Model: Used like Set Overlay. Shows the selected 3D model from the data source.
-                                Put SVG in a Custom field.
-                        </p>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Change Action</label>
+                        <label for="data_source">Default</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="data_source" name="data_source">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -1388,54 +1350,29 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Step</label>
-                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
-                          <option>A</option>
-                          <option>B</option>
-                          <option>C</option>
-                        </select>
-                        <div class="help-block with-errors"></div>
-
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="cart_p">Dafault Value</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="max_number_team">Max Number of Teams</label>
+                        <input id="max_number_team" type="text" name="max_number_team" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
+                        <p>Default To 5</p>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Min Value</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
+                        <label for="max_number_player">Max Number of Players Per Team</label>
+                        <input id="max_number_player" type="number" name="max_number_player" class="form-control"
                           placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
+                        <p>Default To 30</p>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Max Value</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
-                          required="required" data-error="Position required">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="category">Act On Field</label>
+                        <label for="hide_quantities">Hide Quantities</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
-                          <option>A</option>
-                          <option>B</option>
-                          <option>C</option>
-                        </select>
+                        <input type="checkbox" id="hide_quantities" name="hide_quantities">
                         <div class="help-block with-errors"></div>
 
                       </div>
@@ -1443,82 +1380,43 @@
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <!--Nav Tab-->
-                      <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link active show" href="#SvgSnippet" role="tab" data-toggle="tab">product</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#IdToSvg" role="tab" data-toggle="tab">Category</a>
-                        </li>
-                      </ul>
-                      <!--end-->
-                      <!--product_step tab-contant-->
-                      <div role="tabpanel" class="tab-pane fade" id="SvgSnippet">
-                        ascascas
-                        <!--Form Start-->
-                        <div class="d-none" id="p-step-form">
-                          <form class="m-t-b" method="post" action="contact.php" role="form">
-                            <div class="messages"></div>
-                            <div class="controls">
-                              <h3>Add Step</h3>
-                              <hr>
-                              <!--input Fields-->
-
-                              <div class="row">
-                                <div class="col-md-12">
-                                  <p class="text-muted"><strong>*</strong> These fields are required.</p>
-                                </div>
-                              </div>
-                            </div>
-
-                          </form>
-                        </div>
-                        <!--Form End-->
-
+                      <div class="form-group">
+                        <label for="hide_file">Hide File Upload</label>
+                        <input type="checkbox" id="hide_file" name="hide_file">
+                        <div class="help-block with-errors"></div>
                       </div>
-                      <!--end-->
-                      <!--product_step tab-contant-->
-                      <div role="tabpanel" class="tab-pane fade" id="IdToSvg">
-                        ascascas
-                        <!--Form Start-->
-                        <div class="d-none" id="p-step-form">
-                          <form class="m-t-b" method="post" action="contact.php" role="form">
-                            <div class="messages"></div>
-                            <div class="controls">
-                              <h3>Add Step</h3>
-                              <hr>
-                              <!--input Fields-->
-
-                              <div class="row">
-                                <div class="col-md-12">
-                                  <p class="text-muted"><strong>*</strong> These fields are required.</p>
-                                </div>
-                              </div>
-                            </div>
-
-                          </form>
-                        </div>
-                        <!--Form End-->
-
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="hide_term_player">Hide terms and Player Details Entry</label>
+                        <input type="checkbox" id="hide_term_player" name="hide_term_player">
+                        <div class="help-block with-errors"></div>
                       </div>
-                      <!--end-->
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">SVG Render Order</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="show_spreadsheet">Show Spreadsheet Importer</label>
+                        <input type="checkbox" id="show_spreadsheet" name="show_spreadsheet">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="show_slector">Show Slector</label>
+                        <input type="checkbox" id="show_slector" name="show_slector">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                 
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="position">Position</label>
+                        <input id="position" type="text" name="position" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="cart_p">Position</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
-                          placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
@@ -1550,9 +1448,9 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Step</label>
+                        <label for="step">Step</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="step" name="step">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -1563,9 +1461,9 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Type</label>
+                        <label for="type">Type</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="type" name="type">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
@@ -1611,16 +1509,16 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Name</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Override Lable Text</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
+                        <label for="override_lable">Override Lable Text</label>
+                        <input id="override_lable" type="number" name="override_lable" class="form-control"
                           placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -1630,42 +1528,22 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Description</label>
-                        <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
+                        <label for="description">Description</label>
+                        <input id="description" type="text" name="description" class="form-control" placeholder="Quantity"
                           required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="cart_p">Key</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
+                        <label for="key">Key</label>
+                        <input id="key" type="number" name="key" class="form-control"
                           placeholder="e.g Choose material" required="required" data-error="Position required">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="cart_p">Required</label>
-                        <!-- <input id="cart_p" type="text" name="cart_p" class="form-control" placeholder="Quantity"
-                                required="required" data-error="Position required"> -->
-                        <input type="checkbox" value="">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="cart_p">Override Lable Text</label>
-                        <input id="cart_p" type="number" name="cart_p" class="form-control"
-                          placeholder="e.g Choose material" required="required" data-error="Position required">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="category">View Action</label>
@@ -1724,18 +1602,18 @@
                       </div>
                     </div>
                   </div>
+                  <hr>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="category">Step</label>
+                        <label for="act_field">Act On Field</label>
                         <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
-                        <select class="form-control">
+                        <select class="form-control" id="act_field" name="act_field">
                           <option>A</option>
                           <option>B</option>
                           <option>C</option>
                         </select>
                         <div class="help-block with-errors"></div>
-
                       </div>
                     </div>
                   </div>
