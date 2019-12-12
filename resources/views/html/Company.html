@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'> -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,700'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+  <!-- <link rel='stylesheet' href='https://cdn.datatables.net/v/bs-3.3.6/jqc-1.12.3/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.12/af-2.1.2/b-1.2.2/b-colvis-1.2.2/b-html5-1.2.2/b-print-1.2.2/cr-1.3.2/fc-3.2.2/fh-3.1.2/kt-2.1.3/r-2.1.0/rr-1.1.2/sc-1.4.2/se-1.2.0/datatables.min.css'> -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <!--Test Drive-->
+        <h3>Add Company</h3>
+        <h5>Edit Company</h5>
+        <hr>
+        <!--End-->
+        <!--Nav Tab-->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="#product" role="tab" data-toggle="tab aria-controls="Main">Main</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#category" role="tab" data-toggle="tab" aria-controls="Social Media">Social Media</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#product_step" role="tab" data-toggle="tab" aria-controls="Product Step">
+            Controls for Customise Page </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Product_field" role="tab" data-toggle="tab" aria-controls="Product field">Navigation
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Product_design" role="tab" data-toggle="tab"
+              aria-controls="Product Design">Cart Integration</a>
+          </li>
+        </ul>
+        <!--end-->
+        <!-- Tab panes -->
+        <div class="tab-content ">
+          <!--Product Tab Content-->
+          <div role="tabpanel" class="tab-pane fade in active" id="product">
+            <!-- <div class="m-t-b"><button id="product-btn" onclick="divToggle('product-form-toggle')"
+                class="btn btn-primary pushme with-color">Add</button></div> -->
+
+            <!--Form Start-->
+            <div class="" id="product-form-toggle">
+              <form id="product-form" class="m-t-b" method="post" action="contact.php" role="form">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" class="form-control"
+                          placeholder="e.g Magnetize" required="required"
+                          data-error="Firstname is required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" class="form-control"
+                          placeholder="e.g info@company.com" required="required" data-error="Email is required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="logo">Logo</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control" id="logo" name="logo">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="setting">Setting</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control" id="setting" name="setting">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="number" name="phone" class="form-control" placeholder="e.g +923049018107"
+                          required="required" data-error="">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="web_url">Web URL</label>
+                        <input id="web_url" type="number" name="web_url" class="form-control" placeholder="e.g http://itswebsoft.com/"
+                          required="required" data-error="required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="default">Default</label>
+                        <!-- <input id="f_overlay" type="number" name="f_overlay" class="form-control" placeholder=""
+                              required="required" data-error="">   -->
+                        <select class="form-control" id="default" name="default">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="time_zone">Time Zone</label>
+                        <select class="form-control" id="time_zone" name="time_zone">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="locale">Locale</label>
+                        <select class="form-control" id="locale" name="locale ">
+                          <option>Test</option>
+                          <option>Test</option>
+                          <option>Test</option>
+                        </select>
+
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="active">Active</label>
+                        <input id="active" type="checkbox" name="active">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Save">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--Form End-->
+            <!--Table-->
+            <table id="tbl-Product" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+              role="grid" aria-describedby="example_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Position: activate to sort column ascending" style="width: 215px;">Category ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Office: activate to sort column ascending" style="width: 100px;">Category Name</th>
+                  <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">
+                    position</th>
+
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">ID</th>
+                  <th rowspan="1" colspan="1">Category ID</th>
+                  <th rowspan="1" colspan="1">Category Name</th>
+                  <th rowspan="1" colspan="1">Position</th>
+
+                </tr>
+              </tfoot>
+              <tbody>
+
+
+                <tr role="row" class="odd">
+                  <td class="">Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                  <td class="sorting_1">66</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Michael Silva</td>
+                  <td>Marketing Designer</td>
+                  <td>London</td>
+                  <td class="sorting_1">66</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Jackson Bradshaw</td>
+                  <td>Director</td>
+                  <td>New York</td>
+                  <td class="sorting_1">65</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Olivia Liang</td>
+                  <td>Support Engineer</td>
+                  <td>Singapore</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Paul Byrd</td>
+                  <td>Chief Financial Officer (CFO)</td>
+                  <td>New York</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Serge Baldwin</td>
+                  <td>Data Coordinator</td>
+                  <td>Singapore</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Garrett Winters</td>
+                  <td>Accountant</td>
+                  <td>Tokyo</td>
+                  <td class="sorting_1">63</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Brielle Williamson</td>
+                  <td>Integration Specialist</td>
+                  <td>New York</td>
+                  <td class="sorting_1">61</td>
+                </tr>
+              </tbody>
+            </table>
+            <!--End table-->
+
+          </div>
+          <!--End-->
+
+          <!--Category tab-contant-->
+          <div role="tabpanel" class="tab-pane fade" id="category">
+            <!--Form Start-->
+            <div class="" id="category-form-toggle">
+              <form id="category-form" class="m-t-b" method="post" action="contact.php" role="form">
+                <div class="messages"></div>
+                <div class="controls">
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="add_social_share">Add This Social Share </label>
+                        <input id="add_social_share" type="Area" name="add_social_share" class="form-control" placeholder="Description" required="required" data-error="Category required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="add_pub">AddThis Pub ID</label>
+                        <input id="add_pub" type="number" name="add_pub" class="form-control" placeholder="e.g 10"
+                          required="required" data-error="Position required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="add_social_share">Insert AddThis Script</label>
+                        <input id="add_social_share" type="checkbox" name="add_social_share" placeholder="Description" required="required" data-error="Category required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Save Category Mapping">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+            <!--Form End-->
+            <!--Table-->
+            <table id="tbl-category" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+              role="grid" aria-describedby="example_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Position: activate to sort column ascending" style="width: 215px;">Category ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Office: activate to sort column ascending" style="width: 100px;">Category Name</th>
+                  <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">
+                    position</th>
+
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">ID</th>
+                  <th rowspan="1" colspan="1">Category ID</th>
+                  <th rowspan="1" colspan="1">Category Name</th>
+                  <th rowspan="1" colspan="1">Position</th>
+
+                </tr>
+              </tfoot>
+              <tbody>
+
+
+                <tr role="row" class="odd">
+                  <td class="">Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                  <td class="sorting_1">66</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Michael Silva</td>
+                  <td>Marketing Designer</td>
+                  <td>London</td>
+                  <td class="sorting_1">66</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Jackson Bradshaw</td>
+                  <td>Director</td>
+                  <td>New York</td>
+                  <td class="sorting_1">65</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Olivia Liang</td>
+                  <td>Support Engineer</td>
+                  <td>Singapore</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Paul Byrd</td>
+                  <td>Chief Financial Officer (CFO)</td>
+                  <td>New York</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Serge Baldwin</td>
+                  <td>Data Coordinator</td>
+                  <td>Singapore</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Garrett Winters</td>
+                  <td>Accountant</td>
+                  <td>Tokyo</td>
+                  <td class="sorting_1">63</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Brielle Williamson</td>
+                  <td>Integration Specialist</td>
+                  <td>New York</td>
+                  <td class="sorting_1">61</td>
+                </tr>
+              </tbody>
+            </table>
+            <!--End table-->
+
+          </div>
+          <!--end-->
+
+          <!--product_step tab-contant-->
+          <div role="tabpanel" class="tab-pane fade" id="product_step">
+            <!--Form Start-->
+            <div class="" id="p-step-form">
+              <form class="m-t-b" method="post" action="contact.php" role="form">
+                <div class="messages"></div>
+                <div class="controls">
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="name">Auto Show First Substep</label>
+                        <input id="name" type="checkbox" name="name"  data-error="Position required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="name">Scroll Customise Control</label>
+                        <input id="name" type="checkbox" name="name"  data-error="Position required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="name">Product Name/Price Heading</label>
+                        <input id="name" type="checkbox" name="name"  data-error="Position required">
+                        <p>Show product name and price heading above comtomise control</p>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="logo">Price Type</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control" id="logo" name="logo">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="name">Replace Buy Button with "Request a Qoute"</label>
+                        <input id="name" type="checkbox" name="name"  data-error="Position required">
+                        <p>Require from with key 'QouteRequest'</p>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Save Step">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+            <!--Form End-->
+            <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+              role="grid" aria-describedby="example_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Position: activate to sort column ascending" style="width: 215px;">Name</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Office: activate to sort column ascending" style="width: 100px;">Position</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">ID</th>
+                  <th rowspan="1" colspan="1">Category ID</th>
+                  <th rowspan="1" colspan="1">Position</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr role="row" class="odd">
+                  <td class="">Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Michael Silva</td>
+                  <td>Marketing Designer</td>
+                  <td>London</td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Jackson Bradshaw</td>
+                  <td>Director</td>
+                  <td>New York</td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Olivia Liang</td>
+                  <td>Support Engineer</td>
+                  <td>Singapore</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--end-->
+          
+           <!--product_step tab-contant-->
+           <div role="tabpanel" class="tab-pane fade" id="Product_field">
+            <!-- <div class="m-t-b"><button id="p-step-btn" class="btn btn-primary pushme with-color"
+                onclick="divToggle('p-step-form')">Add Step</button></div> -->
+            <!--Form Start-->
+            <div class="" id="p-step-form">
+              <form class="m-t-b" method="post" action="contact.php" role="form">
+                <div class="messages"></div>
+                <div class="controls">
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="name">Auto Show First Substep</label>
+                        <input id="name" type="checkbox" name="name"  data-error="Position required">
+                        <p>Require from with key 'QouteRequest'</p>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="name">Scroll Customise Control</label>
+                        <input id="name" type="checkbox" name="name"  data-error="Position required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Save Step">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+            <!--Form End-->
+            <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+              role="grid" aria-describedby="example_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Position: activate to sort column ascending" style="width: 215px;">Name</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Office: activate to sort column ascending" style="width: 100px;">Position</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">ID</th>
+                  <th rowspan="1" colspan="1">Category ID</th>
+                  <th rowspan="1" colspan="1">Position</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr role="row" class="odd">
+                  <td class="">Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Michael Silva</td>
+                  <td>Marketing Designer</td>
+                  <td>London</td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Jackson Bradshaw</td>
+                  <td>Director</td>
+                  <td>New York</td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Olivia Liang</td>
+                  <td>Support Engineer</td>
+                  <td>Singapore</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--end-->
+         
+
+          <!--product_Design tab-contant-->
+          <div role="tabpanel" class="tab-pane fade" id="Product_design">
+            
+            <!--Form Start-->
+            <div class="" id="p-step-form">
+              <form class="m-t-b" method="post" action="contact.php" role="form">
+                <div class="messages"></div>
+                <div class="controls">
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="name">Save SVG file</label>
+                        <input id="name" type="checkbox" name="name"  data-error="Position required">
+                        <p>Require from with key 'QouteRequest'</p>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Save Step">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+            <!--Form End-->
+            <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+              role="grid" aria-describedby="example_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Position: activate to sort column ascending" style="width: 215px;">Name</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Office: activate to sort column ascending" style="width: 100px;">Position</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">ID</th>
+                  <th rowspan="1" colspan="1">Category ID</th>
+                  <th rowspan="1" colspan="1">Position</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr role="row" class="odd">
+                  <td class="">Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Michael Silva</td>
+                  <td>Marketing Designer</td>
+                  <td>London</td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Jackson Bradshaw</td>
+                  <td>Director</td>
+                  <td>New York</td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Olivia Liang</td>
+                  <td>Support Engineer</td>
+                  <td>Singapore</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--end-->
+
+          <!--Size Tab Content-->
+          <div role="tabpanel" class="tab-pane fade" id="size">
+            <div class="m-t-b"><button id="product-btn" onclick="divToggle('size-form-toggle')"
+                class="btn btn-primary pushme with-color">Add Size</button></div>
+
+            <!--Form Start-->
+            <div class="d-none" id="size-form-toggle">
+              <form id="product-form" class="m-t-b" method="post" action="contact.php" role="form">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+                  <h3>Add Size</h3>
+                  <hr>
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_name">Name</label>
+                        <input id="form_name" type="text" name="name" class="form-control"
+                          placeholder="Please enter your firstname *" required="required"
+                          data-error="Firstname is required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="url_slug">Cart Price</label>
+                        <input id="url_slug" type="text" name="url_slug" class="form-control"
+                          placeholder="Please Valid URL *" required="required" data-error="url_slug is required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--input Fields-->
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cart_p">Position</label>
+                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 29.99"
+                          required="required" data-error="Cart Price required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+
+                  <div class="row">
+
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Send message">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+            <!--Form End-->
+            <!--Table-->
+            <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+              role="grid" aria-describedby="example_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Position: activate to sort column ascending" style="width: 215px;">Name</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Office: activate to sort column ascending" style="width: 100px;">Position</th>
+                  <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">
+                    Price</th>
+
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">ID</th>
+                  <th rowspan="1" colspan="1">Name</th>
+                  <th rowspan="1" colspan="1">Position</th>
+                  <th rowspan="1" colspan="1">Price</th>
+
+                </tr>
+              </tfoot>
+              <tbody>
+
+
+                <tr role="row" class="odd">
+                  <td class="">Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                  <td class="sorting_1">66</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Michael Silva</td>
+                  <td>Marketing Designer</td>
+                  <td>London</td>
+                  <td class="sorting_1">66</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Jackson Bradshaw</td>
+                  <td>Director</td>
+                  <td>New York</td>
+                  <td class="sorting_1">65</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Olivia Liang</td>
+                  <td>Support Engineer</td>
+                  <td>Singapore</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Paul Byrd</td>
+                  <td>Chief Financial Officer (CFO)</td>
+                  <td>New York</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Serge Baldwin</td>
+                  <td>Data Coordinator</td>
+                  <td>Singapore</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Garrett Winters</td>
+                  <td>Accountant</td>
+                  <td>Tokyo</td>
+                  <td class="sorting_1">63</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Brielle Williamson</td>
+                  <td>Integration Specialist</td>
+                  <td>New York</td>
+                  <td class="sorting_1">61</td>
+                </tr>
+              </tbody>
+            </table>
+            <!--End table-->
+
+          </div>
+           <!--End->
+
+            <!--Group_Item Tab-->
+          <div role="tabpanel" class="tab-pane fade" id="Group_Item">
+            <div class="m-t-b"><button id="product-btn" onclick="divToggle('group-item-form-toggle')"
+                class="btn btn-primary pushme with-color">Add Group Items</button></div>
+
+            <!--Form Start-->
+            <div class="d-none" id="group-item-form-toggle">
+              <form id="product-form" class="m-t-b" method="post" action="contact.php" role="form">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+                  <h3>Group Items</h3>
+                  <hr>
+
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="category">Product</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="category">Design</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="m_quantity">Position</label>
+                        <input id="m_quantity" type="number" name="m_quantity" class="form-control" placeholder="e.g 5"
+                          required="required" data-error="">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Send message">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--Form End-->
+            <!--Table-->
+            <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+              role="grid" aria-describedby="example_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Position: activate to sort column ascending" style="width: 215px;">Product/Design Name
+                  </th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Office: activate to sort column ascending" style="width: 100px;">Position</th>
+                  <!-- <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                      aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">
+                      position</th> -->
+
+                </tr>
+              </thead>
+              <!-- <tfoot>
+                  <tr>
+                    <th rowspan="1" colspan="1">ID</th>
+                    <th rowspan="1" colspan="1">Category ID</th>
+                    <th rowspan="1" colspan="1">Category Name</th>
+                    <th rowspan="1" colspan="1">Position</th>
+
+                  </tr>
+                </tfoot> -->
+              <tbody>
+
+
+                <tr role="row" class="odd">
+                  <td class="">Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Michael Silva</td>
+                  <td>Marketing Designer</td>
+                  <td>London</td>
+                </tr>
+              </tbody>
+            </table>
+            <!--End table-->
+          </div>
+          <!--end-->
+
+          <!--Related_Product Tab-->
+          <div role="tabpanel" class="tab-pane fade" id="Related_Product">
+            <div class="m-t-b"><button id="product-btn" onclick="divToggle('related-form-toggle')"
+                class="btn btn-primary pushme with-color">Add Related Product</button></div>
+
+            <!--Form Start-->
+            <div class="d-none" id="related-form-toggle">
+              <form id="product-form" class="m-t-b" method="post" action="contact.php" role="form">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+                  <h3>Related Products</h3>
+                  <hr>
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="category">Product</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cart_p">Position</label>
+                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 29.99"
+                          required="required" data-error="Cart Price required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Send message">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--Form End-->
+            <!--Table-->
+            <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+              role="grid" aria-describedby="example_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Position: activate to sort column ascending" style="width: 215px;">Product Name</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Office: activate to sort column ascending" style="width: 100px;">Image</th>
+                  <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Age: activate to sort column ascending" aria-sort="descending" style="width: 44px;">
+                    position</th>
+
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">ID</th>
+                  <th rowspan="1" colspan="1">Product Name</th>
+                  <th rowspan="1" colspan="1">Image</th>
+                  <th rowspan="1" colspan="1">Position</th>
+
+                </tr>
+              </tfoot>
+              <tbody>
+
+
+                <tr role="row" class="odd">
+                  <td class="">Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                  <td class="sorting_1">66</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Michael Silva</td>
+                  <td>Marketing Designer</td>
+                  <td>London</td>
+                  <td class="sorting_1">66</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Jackson Bradshaw</td>
+                  <td>Director</td>
+                  <td>New York</td>
+                  <td class="sorting_1">65</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Olivia Liang</td>
+                  <td>Support Engineer</td>
+                  <td>Singapore</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Paul Byrd</td>
+                  <td>Chief Financial Officer (CFO)</td>
+                  <td>New York</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Serge Baldwin</td>
+                  <td>Data Coordinator</td>
+                  <td>Singapore</td>
+                  <td class="sorting_1">64</td>
+
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Garrett Winters</td>
+                  <td>Accountant</td>
+                  <td>Tokyo</td>
+                  <td class="sorting_1">63</td>
+
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Brielle Williamson</td>
+                  <td>Integration Specialist</td>
+                  <td>New York</td>
+                  <td class="sorting_1">61</td>
+                </tr>
+              </tbody>
+            </table>
+            <!--End table-->
+
+          </div>
+          <!--end-->
+
+          <!--Cross_Sell Tab-->
+          <div role="tabpanel" class="tab-pane fade" id="Cross_Sell">
+            <div class="m-t-b"><button id="product-btn" onclick="divToggle('cross-sell-form-toggle')"
+                class="btn btn-primary pushme with-color">Add Cross Sells</button></div>
+
+            <!--Form Start-->
+            <div class="d-none" id="cross-sell-form-toggle">
+              <form id="product-form" class="m-t-b" method="post" action="contact.php" role="form">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+                  <h3>Cross Sells</h3>
+                  <hr>
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="category">Product</label>
+                        <!-- <input id="category" type="text" name="category" class="form-control" placeholder="Please select your Category *" required="required" data-error="Category required."> -->
+                        <select class="form-control">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="url_slug">Design</label>
+                        <input id="url_slug" type="text" name="url_slug" class="form-control"
+                          placeholder="Please Valid URL *" required="required" data-error="url_slug is required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cart_p">Position</label>
+                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 29.99"
+                          required="required" data-error="Cart Price required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Send message">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--Form End-->
+            <!--Table-->
+            <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+              role="grid" aria-describedby="example_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Position: activate to sort column ascending" style="width: 215px;">Product/Design Name
+                  </th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Office: activate to sort column ascending" style="width: 100px;">Position</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">ID</th>
+                  <th rowspan="1" colspan="1">Product/Design Name</th>
+                  <th rowspan="1" colspan="1">Position</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr role="row" class="odd">
+                  <td class="">Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Michael Silva</td>
+                  <td>Marketing Designer</td>
+                  <td>London</td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Jackson Bradshaw</td>
+                  <td>Director</td>
+                  <td>New York</td>
+                </tr>
+              </tbody>
+            </table>
+            <!--End table-->
+          </div>
+          <!--end-->
+
+          <!--Simple_Price_Tires Tab-->
+          <div role="tabpanel" class="tab-pane fade" id="Simple_Price_Tires">
+            <div class="m-t-b"><button id="product-btn" onclick="divToggle('Simple_Price_Tires-form-toggle')"
+                class="btn btn-primary pushme with-color">Add Price Tires</button></div>
+
+            <!--Form Start-->
+            <div class="d-none" id="Simple_Price_Tires-form-toggle">
+              <form id="product-form" class="m-t-b" method="post" action="contact.php" role="form">
+
+                <div class="messages"></div>
+
+                <div class="controls">
+                  <h3>Add Price Tires</h3>
+                  <hr>
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="url_slug">Minimum Quantity</label>
+                        <input id="url_slug" type="text" name="url_slug" class="form-control"
+                          placeholder="Please Valid URL *" required="required" data-error="url_slug is required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="url_slug">Unit Price</label>
+                        <input id="url_slug" type="text" name="url_slug" class="form-control"
+                          placeholder="Please Valid URL *" required="required" data-error="url_slug is required.">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--input Fields-->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cart_p">Fixed Discount</label>
+                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 29.99"
+                          required="required" data-error="Cart Price required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cart_p">Percent Discount</label>
+                        <input id="cart_p" type="number" name="cart_p" class="form-control" placeholder="e.g 29.99"
+                          required="required" data-error="Cart Price required">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---End-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="submit" class="btn btn-success btn-send" value="Send message">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--Form End-->
+            <!--Table-->
+            <table id="example" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+              role="grid" aria-describedby="example_info" style="width: 100%;">
+              <thead>
+                <tr role="row">
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Position: activate to sort column ascending" style="width: 215px;">Minimum Quantity
+                  </th>
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Office: activate to sort column ascending" style="width: 100px;">Unit Price</th>
+
+
+                  <th class="Fixed Discoun" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Discount: activate to sort column ascending" style="width: 100px;">Fixed Discount</th>
+
+                  <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                    aria-label="Percent Discount: activate to sort column ascending" style="width: 100px;">Percent
+                    Discount</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">ID</th>
+                  <th rowspan="1" colspan="1">Minimum Quantity</th>
+                  <th rowspan="1" colspan="1">Unit Price</th>
+                  <th rowspan="1" colspan="1">Fixed Discoun</th>
+                  <th rowspan="1" colspan="1">Percent Discount</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr role="row" class="odd">
+                  <td class="">Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                  <th rowspan="1" colspan="1">Product/Design Name</th>
+                  <th rowspan="1" colspan="1">Position</th>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="">Michael Silva</td>
+                  <td>Marketing Designer</td>
+                  <td>London</td>
+                  <th rowspan="1" colspan="1">Product/Design Name</th>
+                  <th rowspan="1" colspan="1">Position</th>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="">Jackson Bradshaw</td>
+                  <td>Director</td>
+                  <td>New York</td>
+                  <th rowspan="1" colspan="1">Product/Design Name</th>
+                  <th rowspan="1" colspan="1">Position</th>
+                </tr>
+              </tbody>
+            </table>
+            <!--End table-->
+          </div>
+          <!--end-->
+
+          <!-- End Main Tab Content-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<!-- partial -->
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js'></script>
+<script src="./script.js"></script>
+<script>
+
+</script>
+
+</html>

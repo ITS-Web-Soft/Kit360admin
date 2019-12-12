@@ -17,6 +17,9 @@ body {
   margin-top: 5px;
   padding: 3px;
 }
+ul.nav-tabs li a:after{
+  background-color: red;
+}
 /* Genrel Style End */
 
 
