@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'> -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,700'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+    <!-- <link rel='stylesheet' href='https://cdn.datatables.net/v/bs-3.3.6/jqc-1.12.3/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.12/af-2.1.2/b-1.2.2/b-colvis-1.2.2/b-html5-1.2.2/b-print-1.2.2/cr-1.3.2/fc-3.2.2/fh-3.1.2/kt-2.1.3/r-2.1.0/rr-1.1.2/sc-1.4.2/se-1.2.0/datatables.min.css'> -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h3>Customer File</h3>
+        <h5>Showing latest 400 files.</h5>
+        <hr>
+        <div class="row">
+            <div class="col-md-4" style="float: right;"> <input id="name" type="text" name="name" class="form-control" placeholder="Enter Id For Download"
+                required="required" data-error="Setting Required"><button class="btn btn-success m-t-b">Download</button></div>
+        </div>
+        <!--Table-->
+        <table id="tbl-Product" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%"
+            role="grid" aria-describedby="example_info" style="width: 100%;">
+            <thead>
+                <tr role="row">
+                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                        aria-label="Name: activate to sort column ascending" style="width: 137px;">ID</th>
+                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                        aria-label="Position: activate to sort column ascending" style="width: 215px;">Name
+                    </th>
+                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                        aria-label="Position: activate to sort column ascending" style="width: 215px;">Size
+                    </th>
+                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                        aria-label="Position: activate to sort column ascending" style="width: 215px;">Preview
+                    </th>
+                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                        aria-label="Position: activate to sort column ascending" style="width: 215px;">uploaded
+                    </th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th rowspan="1" colspan="1">ID</th>
+                    <th rowspan="1" colspan="1">Name</th>
+                    <th rowspan="1" colspan="1">Size</th>
+                    <th rowspan="1" colspan="1">preview</th>
+                    <th rowspan="1" colspan="1">uploaded</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr role="row" class="odd">
+                    <td class="">Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td class="">Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td class="">Ashton Cox</td>
+                    
+                </tr>
+                <tr role="row" class="even">
+                    <td class="">Michael Silva</td>
+                    <td>Marketing Designer</td>
+                    <td class="">Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td class="">Ashton Cox</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--End table-->
+
+    </div>
+    <!--End-->
+
+
+</body>
+<!-- partial -->
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js'></script>
+<script src="./script.js"></script>
+<script>
+
+</script>
+
+</html>
